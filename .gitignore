@@ -4,6 +4,6 @@
 # OS, IDE specific
 .DS_Store
 /.vscode
-
+/.idea
 # project specific
-resources/*.txt
+
