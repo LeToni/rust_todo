@@ -36,6 +36,13 @@ impl Todo {
         }
         std::fs::write("resources/todos.txt", content)
     }
+
+    fn complete(&mut self, key: &String) -> Option<()> {
+        match self.map.get_mut(key) {
+            Some(v) => Some(*v = false),
+            None => None,
+        }
+    }
 }
 
 fn main() {
@@ -49,6 +56,14 @@ fn main() {
         match todo.save() {
             Ok(_) => println!("Saved todo "),
             Err(error) => println!("An error occured: {}", error),
+        }
+    } else if action == "complete" {
+        match todo.complete(&item) {
+            None => println!("'{}' is not present in the list", item),
+            Some(_) => match todo.save() {
+                Ok(_) => println!("Todo updated and saved"),
+                Err(error) => println!("An error occured: {}", error),
+            },
         }
     }
 }
