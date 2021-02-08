@@ -6,4 +6,4 @@
 /.vscode
 /.idea
 # project specific
-resources/*.txt
+/resources
