@@ -40,4 +40,11 @@ impl Todo {
             None => None,
         }
     }
+
+    pub fn delete(&mut self, key: &String) -> Option<()> {
+        match self.map.remove(key) {
+            Some(_) => Some(()),
+            None => None,
+        }
+    }
 }
