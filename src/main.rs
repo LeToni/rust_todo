@@ -28,5 +28,7 @@ fn main() {
                 Err(error) => println!("An error occured {}", error),
             },
         }
+    } else if action == "display" {
+        todo.display();
     }
 }

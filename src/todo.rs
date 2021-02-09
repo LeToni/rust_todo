@@ -47,4 +47,12 @@ impl Todo {
             None => None,
         }
     }
+
+    pub fn display(self) {
+        println!("Todos:\n");
+        for (key, val) in self.map.iter() {
+            println!("{: <30} | Completed: {: <10}", key, val)
+        }
+        println!("");
+    }
 }
