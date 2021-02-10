@@ -7,3 +7,7 @@ Clone from tutorial: [Rust Programming Language Tutorial – How to Build a To-D
 ### Functionalities
 - add elements
 - update elements
+
+## Version 0.1.0
+- delete elements
+- display all elements on console
